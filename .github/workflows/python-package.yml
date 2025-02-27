@@ -39,4 +39,5 @@ jobs:
         git commit -am "auto update README.md"
     - name: Push changes
       run: |
+        git remote set-url origin https://github-actions:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git
         git push
